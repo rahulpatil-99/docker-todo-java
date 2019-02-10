@@ -24,4 +24,8 @@ public class Todo {
                 ", desc='" + desc + '\'' +
                 '}';
     }
+
+    public String toCSV() {
+        return title + "," + desc;
+    }
 }
