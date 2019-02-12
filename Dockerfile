@@ -1,9 +1,9 @@
-FROM openjdk:latest
+FROM openjdk:8-jre-alpine
 
-WORKDIR /var/todoApp
+WORKDIR /var/todoapp
 
-COPY . .
+COPY /build/libs/todoapp.jar .
 
 EXPOSE 8080
 
-CMD ["./gradlew", "clean", "build", "bootrun"]
+CMD ["java", "-jar", "./todoapp.jar"]
